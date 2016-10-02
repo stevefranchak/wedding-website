@@ -55,8 +55,12 @@ grunt server --port=8881
 Alternatively, the server can be started by being invoked directly:
 
 ```bash
+# The server listens on port 8000 by default
 ./test/test_server.py
-# One can also pass the port:  ./test/test_server.py 8881
 ```
 
-**Note:** The previous example should be used by Windows users.
+The port that the server listens on can be changed like so:
+
+```bash
+./test/test_server.py 8881
+```
