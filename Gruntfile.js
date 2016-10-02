@@ -11,7 +11,8 @@ module.exports = function(grunt) {
   		customTasksDir: path.join(process.cwd(), 'grunt', 'tasks')
   	},
   	data: {
-  		production: grunt.option('prod') || false
+  		production: grunt.option('prod') || false,
+        jsDeps: require('./grunt/options/jsDeps')
   	}
   });
 

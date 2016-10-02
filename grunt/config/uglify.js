@@ -14,9 +14,7 @@ module.exports = function(grunt, options) {
 		jsDeps: {
 			files: (function() {
 				var result = {};
-				result[`${gruntConstants.SITE_BUILD_DIR}/js/deps.js`] = [
-					'./js/deps/*.js'
-				];
+				result[`${gruntConstants.SITE_BUILD_DIR}/js/deps.js`] = options.jsDeps;
 				return result;
 			})()
 		}
