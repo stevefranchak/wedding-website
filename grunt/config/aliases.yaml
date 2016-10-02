@@ -1,0 +1,4 @@
+default:
+  - 'mkdir:site'
+  - 'clean:site'
+  - 'mkdir:site_dirs'
