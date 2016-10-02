@@ -1,6 +1,11 @@
 default:
+  - 'build'
+
+build:
   - 'mkdir:site'
   - 'clean:site'
   - 'mkdir:siteDirs'
   - 'copy:indexHtml'
   - 'uglify:jsDeps'
+  - 'sass:main'
+  - 'cssmin:main'

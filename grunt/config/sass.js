@@ -1,21 +1,18 @@
 const gruntConstants = require('../constants');
 
 module.exports = function(grunt, options) {
-
     var isProduction = options.production;
 
     return {
         options: {
-            mangle: isProduction,
-            compress: isProduction,
-            preserveComments: !isProduction,
-            beautify: !isProduction
+            outputStyle: isProduction ? 'compact' : 'expanded',
+            sourceMap: !isProduction
         },
-        jsDeps: {
+        main: {
             files: (function() {
                 var result = {};
 
-                result[`${gruntConstants.SITE_BUILD_DIR}/js/deps.js`] = options.jsDeps;
+                result[`${gruntConstants.SITE_BUILD_DIR}/css/main.css`] = './scss/main.scss';
                 
                 return result;
             })()
