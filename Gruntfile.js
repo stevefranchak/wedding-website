@@ -1,7 +1,6 @@
 var path = require('path');
 
 module.exports = function(grunt) {
-
   // measures the time each task takes
   require('time-grunt')(grunt);
 
@@ -10,6 +9,9 @@ module.exports = function(grunt) {
   	configPath: path.join(process.cwd(), 'grunt', 'config'),
   	jitGrunt: {
   		customTasksDir: path.join(process.cwd(), 'grunt', 'tasks')
+  	},
+  	data: {
+  		production: grunt.option('prod') || false
   	}
   });
 

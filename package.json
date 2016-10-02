@@ -21,7 +21,11 @@
   "homepage": "https://github.com/stevefranchak/wedding-website#readme",
   "devDependencies": {
     "grunt": "^1.0.1",
+    "grunt-concurrent": "^2.3.1",
     "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
     "grunt-mkdir": "^1.0.0",
     "grunt-newer": "^1.2.0",
     "jit-grunt": "^0.10.0",

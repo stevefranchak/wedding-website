@@ -15,8 +15,15 @@ npm install
 
 ## Build
 
+
+### Development Build
+
 ```bash
 grunt
 ```
 
-TODO: There will be separate development and production builds.
+### Production Build
+
+```bash
+grunt --prod
+```

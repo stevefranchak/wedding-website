@@ -1,4 +1,6 @@
 default:
   - 'mkdir:site'
   - 'clean:site'
-  - 'mkdir:site_dirs'
+  - 'mkdir:siteDirs'
+  - 'copy:indexHtml'
+  - 'uglify:jsDeps'
