@@ -24,7 +24,7 @@ class MyHTTPRequestHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
 
 def print_error(*args, **kwargs):
     def map_multilines(ele):
-        if isinstance(ele, collections.Iterable):
+        if isinstance(ele, collections.Iterable) and type(ele) is not str:
             return '\n'.join(ele)
         return ele
 
