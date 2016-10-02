@@ -10,7 +10,7 @@ module.exports = {
     },
     siteDirs: {
         options: {
-            create: ['js', 'css', 'img'].map((dir) => {return path.join(gruntConstants.SITE_BUILD_DIR, dir);})
+            create: ['js', 'css', 'img'].map((dir) => path.join(gruntConstants.SITE_BUILD_DIR, dir))
         }
     }
 };

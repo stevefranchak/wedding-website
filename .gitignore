@@ -38,3 +38,4 @@ jspm_packages
 
 # wedding-website specific ignores
 site
+js/main.js

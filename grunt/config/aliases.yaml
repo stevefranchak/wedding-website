@@ -1,11 +1,32 @@
 default:
+  - 'prepare'
   - 'build'
 
-build:
+server:
+  - 'shell:server'
+
+prepare:
   - 'mkdir:site'
   - 'clean:site'
   - 'mkdir:siteDirs'
+
+build:
   - 'copy:indexHtml'
+  - 'buildJsAll'
+  - 'buildCss'
+
+buildJsAll:
+  - 'buildJsMain'
+  - 'buildJsDeps'
+
+buildJsMain:
+  - 'jshint:main'
+  - 'browserify2:main'
+  - 'uglify:main'
+
+buildJsDeps:
   - 'uglify:jsDeps'
+
+buildCss:
   - 'sass:main'
   - 'cssmin:main'

@@ -11,5 +11,5 @@ var jsDeps = [
 ];
 
 module.exports = jsDeps.map(
-    (jsDep) => {return `${JS_DEPS_DIR}/${jsDep}.js`;}
+    (jsDep) => `${JS_DEPS_DIR}/${jsDep}.js`
 );

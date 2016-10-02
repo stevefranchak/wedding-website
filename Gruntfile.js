@@ -12,7 +12,10 @@ module.exports = function(grunt) {
         },
         data: {
             production: grunt.option('prod') || false,
-            jsDeps: require('./grunt/options/jsDeps')
+            jsDeps: require('./grunt/options/jsDeps'),
+            serverOptions: {
+                port: grunt.option('port') || 8000
+            }
         }
     });
 

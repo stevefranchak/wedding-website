@@ -19,6 +19,15 @@ module.exports = function(grunt, options) {
                 
                 return result;
             })()
+        },
+        main: {
+            files: (function() {
+                var result = {};
+
+                result[`${gruntConstants.SITE_BUILD_DIR}/js/main.js`] = './js/main.js';
+                
+                return result;
+            })()
         }
     };
 };
