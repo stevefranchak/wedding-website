@@ -1,4 +1,5 @@
-const gruntConstants = require('../constants');
+const gruntConstants = require('../constants'),
+    SINGLE_QUOTES = 1;
 
 module.exports = function(grunt, options) {
 
@@ -21,6 +22,9 @@ module.exports = function(grunt, options) {
             })()
         },
         main: {
+            options: {
+                quoteStyle: SINGLE_QUOTES
+            },
             files: (function() {
                 var result = {};
 

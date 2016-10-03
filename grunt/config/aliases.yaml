@@ -11,18 +11,20 @@ prepare:
   - 'mkdir:siteDirs'
 
 build:
-  - 'copy:indexHtml'
+  - 'newer:copy:indexHtml'
   - 'buildJsAll'
   - 'buildCss'
+  - 'newer:copy:img'
+  - 'shouldWatch'
 
 buildJsAll:
   - 'buildJsMain'
   - 'buildJsDeps'
 
 buildJsMain:
-  - 'jshint:main'
+  - 'newer:jshint:main'
   - 'browserify2:main'
-  - 'uglify:main'
+  - 'shouldUglifyJsMain'
 
 buildJsDeps:
   - 'uglify:jsDeps'

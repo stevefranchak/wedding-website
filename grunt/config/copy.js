@@ -1,11 +1,17 @@
-var path = require('path'),
-    processDir = process.cwd();
-
 const gruntConstants = require('../constants');
 
 module.exports = {
     indexHtml: {
-        src: path.join(processDir, 'index.html'),
-        dest: path.join(gruntConstants.SITE_BUILD_DIR, 'index.html')
+        src: './index.html',
+        dest: `${gruntConstants.SITE_BUILD_DIR}/index.html`
+    },
+    img: {
+        cwd: './img',
+        src: '**',
+        dest: `${gruntConstants.SITE_BUILD_DIR}/img/`
+    },
+    jsMain: {
+        src: './js/main.js',
+        dest: `${gruntConstants.SITE_BUILD_DIR}/js/main.js`
     }
 };
