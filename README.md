@@ -25,7 +25,7 @@ grunt
 #### Flags
 
 * `--prod` - Builds wedding-website for production, uglifying the generated JS and CSS files
-* `--watch` - Watches js/lib/**, js/deps/**, and scss/** for file changes and rebuilds
+* `--watch` - Watches `js/lib/**`, `js/deps/**`, and `scss/**` for file changes and rebuilds
 
 
 ## Test Server
