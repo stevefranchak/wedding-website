@@ -15,18 +15,16 @@ npm install
 
 ## Build
 
-
-### Development Build
+The JavaScript task runner grunt is used to build wedding-website. 
 
 ```bash
 grunt
 ```
 
-### Production Build
+#### Flags
 
-```bash
-grunt --prod
-```
+* `--prod` - Builds wedding-website for production, uglifying the generated JS and CSS files
+* `--watch` - Watches js/lib/**, js/deps/**, and scss/** for file changes and rebuilds
 
 
 ## Test Server
