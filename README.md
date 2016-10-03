@@ -10,6 +10,7 @@ Node.js and its package manager npm are required dependencies. The following ver
 Once these dependencies are installed and the git repo cloned, execute the following to install all the node dependencies:
 
 ```bash
+npm -g install grunt-cli
 npm install
 ```
 
