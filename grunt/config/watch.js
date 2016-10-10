@@ -3,15 +3,19 @@ module.exports = {
         interrupt: true
     },
     jsMain: {
-        files: './js/lib/**/*.js',
+        files: 'js/lib/**/*.js',
         tasks: 'buildJsMain'
     },
     jsDeps: {
-        files: './js/deps/**/*.js',
+        files: 'js/deps/**/*.js',
         tasks: 'buildJsDeps'
     },
     css: {
-        files: './scss/**/*.scss',
+        files: 'scss/**/*.scss',
         tasks: 'buildCss'
+    },
+    images: {
+        files: 'img/**',
+        tasks: 'reloadImages'
     }
 };

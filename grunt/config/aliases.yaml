@@ -14,7 +14,7 @@ build:
   - 'newer:copy:indexHtml'
   - 'buildJsAll'
   - 'buildCss'
-  - 'newer:copy:img'
+  - 'copyImages'
   - 'shouldWatch'
 
 buildJsAll:
@@ -32,3 +32,10 @@ buildJsDeps:
 buildCss:
   - 'sass:main'
   - 'cssmin:main'
+
+copyImages:
+  - 'copy:img'
+
+reloadImages:
+  - 'clean:siteImages'
+  - 'copyImages'
