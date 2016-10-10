@@ -1,0 +1,80 @@
+$block-resize-width-s: 1000px;
+$block-resize-width-l: 1300px;
+
+html {
+    background: url(#{$imgDir}/cover-min-50.jpg) no-repeat top center fixed;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+
+    @media (max-width: $screen-xs-max) {
+        background-position-x: 46%;
+    }
+}
+
+body {
+    background: none;
+}
+
+#coming-soon-block {
+
+    font-family: 'Spicy Rice', cursive;
+    text-align: center;
+
+    width: 31rem;
+    margin: 0 auto;
+
+    // Based on styles found at https://css-tricks.com/examples/hrs/
+    hr {
+        
+        margin: 2rem auto;
+        padding: 0;
+        border: none;
+        border-top: medium double rgba(51, 51, 51, 0.5);
+        color: rgba(51, 51, 51, 0.5);
+        text-align: center;
+        overflow: visible; // needed to show the ::after pseudo-element in IE
+
+        &::after {
+            content: "\2665\fe0e";
+            display: inline-block;
+            position: relative;
+            top: -0.7em;
+            font-size: 1.5em;
+            padding: 0 0.25em;
+            color: rgba(51, 51, 51, 1);
+        }
+
+        @media (max-width: $block-resize-width-l) {
+            width: 80%;
+            margin: 1rem auto;
+        }
+    }
+
+    h1 {
+        margin-top: 2rem;
+
+        @media (max-width: $block-resize-width-l) {
+            font-size: 3rem;
+            letter-spacing: 0.1rem;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: $block-resize-width-s) {
+            font-size: 2.4rem;
+        }
+    }
+
+    h2 {
+        margin-top: 2rem;
+
+        @media (max-width: $block-resize-width-l) {
+            font-size: 2.4rem;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: $block-resize-width-s) {
+            font-size: 2rem;
+        }
+    }
+}

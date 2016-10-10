@@ -1,1 +1,7 @@
-@import 'normalize';
+// Third-party dependencies
+@import 'deps/bootstrap';
+
+// Main site
+@import 'base';
+@import 'fonts';
+@import 'coming_soon';

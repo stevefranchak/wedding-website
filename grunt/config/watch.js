@@ -17,5 +17,9 @@ module.exports = {
     images: {
         files: 'img/**',
         tasks: 'reloadImages'
+    },
+    html: {
+        files: 'index.html',
+        tasks: 'copyHtml'
     }
 };

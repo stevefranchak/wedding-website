@@ -6,6 +6,7 @@ module.exports = {
         dest: `${gruntConstants.SITE_BUILD_DIR}/index.html`
     },
     img: {
+        expand: true,
         cwd: './img',
         src: '**',
         dest: `${gruntConstants.SITE_BUILD_DIR}/img/`

@@ -11,7 +11,7 @@ prepare:
   - 'mkdir:siteDirs'
 
 build:
-  - 'newer:copy:indexHtml'
+  - 'copyHtml'
   - 'buildJsAll'
   - 'buildCss'
   - 'copyImages'
@@ -39,3 +39,6 @@ copyImages:
 reloadImages:
   - 'clean:siteImages'
   - 'copyImages'
+
+copyHtml:
+  - 'copy:indexHtml'
