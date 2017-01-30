@@ -7,7 +7,8 @@
 const JS_DEPS_DIR = './js/deps/';
 
 var jsDeps = [
-    'jquery'
+    'jquery',
+    'bootstrap'
 ];
 
 module.exports = jsDeps.map(
