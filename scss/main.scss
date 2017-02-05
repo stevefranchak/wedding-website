@@ -13,15 +13,49 @@ html {
 
 body {
   font-family: 'Lato', sans-serif;
+}
+
+.peach-bg {
   background-color: $peach;
+}
+
+.purple-bg {
+  background-color: #9e379f;
+}
+
+.paper-texture-bg {
   background-image: url(#{$imgDir}/paper-2.png);
 }
 
-#main-container {
+section.ls-container {
+  min-height: 30rem;
+
+  & + & {
+    -webkit-box-shadow: inset 0px 6px 13px 0px rgba(51,47,51,1);
+    -moz-box-shadow: inset 0px 6px 13px 0px rgba(51,47,51,1);
+    box-shadow: inset 0px 6px 13px 0px rgba(51,47,51,1);
+  }
+}
+
+header.title-header {
+  @extend .header-font;
+
+  text-align: center;
+
+  > h1 {
+    color: #fdf3e7;
+    margin-top: 0;
+    letter-spacing: 0.1rem;
+    @include responsive-font(10vw, 32px, 46px);
+    padding-top: 2rem;
+  }
+}
+
+#intro-container {
+  padding: 1rem 1.5rem 5rem;
 
   > header {
     text-align: center;
-    margin-top: 1rem;
 
     > div:nth-child(1) {
       @include responsive-font(4vw, 16px, 20px);
@@ -34,6 +68,7 @@ body {
     > div:nth-child(3) {
       letter-spacing: 1.5px;
       @include responsive-font(6vw, 18px, 32px);
+      margin-top: -1.2rem;
     }
 
     .small-ampersand {
@@ -42,17 +77,16 @@ body {
   }
 }
 
-#cover {
-  background: url(#{$imgDir}/cover.png) no-repeat top center fixed;
-  background-size: cover;
-}
-
 .full-width-photo-container {
   padding: 0 1.5rem 0 1.5rem;
-  margin-top: 3rem;
+  margin: 3rem auto 0 auto;
 
   img {
     width: 100%;
     height: auto;
+  }
+
+  @media (min-width: 670.4px) {
+    width: 64.04rem;
   }
 }
