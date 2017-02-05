@@ -27,6 +27,10 @@ body {
   background-image: url(#{$imgDir}/paper-2.png);
 }
 
+.peach-text {
+  color: #fdf3e7;
+}
+
 section.ls-container {
   min-height: 30rem;
 
@@ -46,8 +50,14 @@ header.title-header {
     color: #fdf3e7;
     margin-top: 0;
     letter-spacing: 0.1rem;
-    @include responsive-font(10vw, 32px, 46px);
+    @include responsive-font(10vw, 32px, 42px);
     padding-top: 2rem;
+  }
+
+  > img {
+    @media (min-width: 440px) {
+      transform: scale(1.6);
+    }
   }
 }
 
@@ -88,5 +98,45 @@ header.title-header {
 
   @media (min-width: 670.4px) {
     width: 64.04rem;
+  }
+}
+
+.wide-text-column {
+  padding: 1rem 1rem;
+  line-height: 1.55;
+  word-break: break-word;
+  font-size: 3.4vw;
+
+  @media (min-width: 426px) {
+    padding: 1rem 6.5%;
+    font-size: 107%;
+  }
+
+  @media (min-width: 600px) {
+    padding: 1rem 12.5%;
+    font-size: 130.2%;
+    line-height: 1.6;
+  }
+
+  @media (min-width: 880px) {
+    padding: 1rem 20%;
+    font-size: 138.2%;
+  }
+
+  @media (min-width: 1150px) {
+    padding: 1rem 25%;
+  }
+
+  @media (min-width: 1340px) {
+    padding: 1rem 27.5%;
+    font-size: 2.2rem;
+  }
+}
+
+.m-top {
+  margin-top: 1rem;
+
+  @media (min-width: 600px) {
+    margin-top: 1.5rem;
   }
 }
