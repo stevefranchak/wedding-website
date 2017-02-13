@@ -13,6 +13,7 @@ html {
 
 body {
   font-family: 'Lato', sans-serif;
+  color: #292f33;
 }
 
 .peach-bg {
@@ -20,11 +21,20 @@ body {
 }
 
 .purple-bg {
-  background-color: #9e379f;
+  background-color: #8e44ad;
 }
 
 .paper-texture-bg {
   background-image: url(#{$imgDir}/paper-2.png);
+}
+
+.ring-bg {
+  background-image: url(#{$imgDir}/ring.jpg);
+  background-repeat: no-repeat;
+}
+
+.silver-bg {
+  background-color: #bdc3c7;
 }
 
 .peach-text {
@@ -47,7 +57,6 @@ header.title-header {
   text-align: center;
 
   > h1 {
-    color: #fdf3e7;
     margin-top: 0;
     letter-spacing: 0.1rem;
     @include responsive-font(10vw, 32px, 42px);
@@ -133,10 +142,32 @@ header.title-header {
   }
 }
 
-.m-top {
+.event-info-block {
+  min-height: 20rem;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#event-map-block {
+  height: 40rem;
+}
+
+.m-top-10 {
   margin-top: 1rem;
 
   @media (min-width: 600px) {
     margin-top: 1.5rem;
   }
+}
+
+.m-top-20 {
+  margin-top: 2rem;
+
+  @media (min-width: 600px) {
+    margin-top: 2.5rem;
+  }
+}
+
+.p-bottom-20 {
+  padding-bottom: 2rem;
 }

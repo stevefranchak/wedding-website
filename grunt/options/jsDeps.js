@@ -8,7 +8,8 @@ const JS_DEPS_DIR = './js/deps/';
 
 var jsDeps = [
     'jquery',
-    'bootstrap'
+    'bootstrap',
+    'countdown'
 ];
 
 module.exports = jsDeps.map(
