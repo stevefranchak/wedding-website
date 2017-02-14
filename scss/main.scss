@@ -21,7 +21,7 @@ body {
 }
 
 .purple-bg {
-  background-color: #8e44ad;
+  background-color: rgba(78, 43, 93, 90);
 }
 
 .paper-texture-bg {
@@ -35,6 +35,10 @@ body {
 
 .silver-bg {
   background-color: #bdc3c7;
+}
+
+.cloudy-bg {
+  background-color: #ecf0f1;
 }
 
 .peach-text {
@@ -142,14 +146,58 @@ header.title-header {
   }
 }
 
-.event-info-block {
+.event-details-column {
   min-height: 20rem;
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  height: 40rem;
+
+  > .info-block {
+    @extend .cloudy-bg;
+    @extend .paper-texture-bg;
+    text-align: center;
+    height: 100%;
+    border-radius: 3px;
+    padding-bottom: 1rem;
+
+    > img {
+      transform: scale(0.5);
+      margin-top: -2rem;
+    }
+
+    > .info-block-header {
+      margin-top: -2rem;
+
+      > .type {
+        font-weight: bold;
+        font-size: 2.7rem;
+        letter-spacing: 1px;
+      }
+
+      > .date {
+        font-size: 1.8rem;
+      }
+      
+      > .time {
+        font-size: 1.5rem;
+      }
+    }
+
+    @media (min-width: $screen-md) {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+
+  @media (min-width: $screen-md) {
+    padding-bottom: 0;
+  }
 }
 
 #event-map-block {
-  height: 40rem;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .m-top-10 {
