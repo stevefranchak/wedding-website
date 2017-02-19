@@ -21,7 +21,11 @@ body {
 }
 
 .purple-bg {
-  background-color: rgba(78, 43, 93, 90);
+  background-color: $raspberry;
+}
+
+.light-blue-bg {
+  background-color: $light-blue;
 }
 
 .paper-texture-bg {
@@ -42,7 +46,11 @@ body {
 }
 
 .peach-text {
-  color: #fdf3e7;
+  color: $light-text-color;
+
+  a:not(.btn) {
+    color: darken($light-text-color, 15%);
+  }
 }
 
 section.ls-container {
@@ -65,6 +73,7 @@ header.title-header {
     letter-spacing: 0.1rem;
     @include responsive-font(10vw, 32px, 42px);
     padding-top: 2rem;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
   }
 
   > img {
@@ -246,7 +255,7 @@ header.title-header {
   padding-bottom: 2rem;
 }
 
-.event-details-directions-btn {
+.ls-btn {
   color: #fff;
   margin-top: 1.3rem;
 
@@ -269,5 +278,13 @@ header.title-header {
 
   &:active, &:hover, &:focus {
     color: #fff;
+  }
+
+  &.peach-btn {
+    background-color: darken($light-text-color, 35%);
+
+    &:hover {
+      background-color: darken($light-text-color, 45%);
+    }
   }
 }
