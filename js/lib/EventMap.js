@@ -240,8 +240,14 @@ window.loadEventMap = function() {
         };
 
     // Handler for recentering the map on window resize
-    google.maps.event.addDomListener(window, 'resize', function() {
-        map.setCenter(centerPosition);
+    // Using the Map API's resize event did not seem to work well
+    $(window).on('resize', function() {
+      // Wrapped in a timeout to put the map centering back into the
+      //  event queue to give it a chance to get the map's actual size
+      setTimeout(function() {
+          map.setCenter(centerPosition);
+      }, 0);
+
     });
 
     // Ceremony icon & info window

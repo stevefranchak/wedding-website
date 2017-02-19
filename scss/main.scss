@@ -146,6 +146,20 @@ header.title-header {
   }
 }
 
+.event-details-overview {
+  text-align: center;
+  margin-bottom: 2rem;
+
+  p:nth-child(1) {
+    font-size: 2.7rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p:nth-child(2) {
+    font-size: 1.7rem;
+  }
+}
+
 .event-details-column {
   min-height: 20rem;
   padding-left: 1rem;
@@ -171,18 +185,30 @@ header.title-header {
 
       > .type {
         font-weight: bold;
-        font-size: 2.7rem;
+        font-size: 2.4rem;
         letter-spacing: 1px;
       }
 
       > .date {
-        font-size: 1.8rem;
+        font-size: 1.7rem;
       }
-      
+
       > .time {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
       }
     }
+
+    > .info-block-body {
+      p {
+        white-space: pre-line;
+        font-size: 1.3rem;
+
+        @media (min-width: $screen-md) {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
 
     @media (min-width: $screen-md) {
       border-bottom-left-radius: 0;
@@ -218,4 +244,30 @@ header.title-header {
 
 .p-bottom-20 {
   padding-bottom: 2rem;
+}
+
+.event-details-directions-btn {
+  color: #fff;
+  margin-top: 1.3rem;
+
+  // I know I could probably use a mixin of sorts here, but I'm in a time crunch and still learning SASS :)
+  &[data-type="ceremony"] {
+    background-color: $ceremony-color;
+
+    &:hover {
+      background-color: darken($ceremony-color, 10%);
+    }
+  }
+
+  &[data-type="reception"] {
+    background-color: $reception-color;
+
+    &:hover {
+      background-color: darken($reception-color, 10%);
+    }
+  }
+
+  &:active, &:hover, &:focus {
+    color: #fff;
+  }
 }

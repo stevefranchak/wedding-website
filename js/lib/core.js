@@ -9,4 +9,13 @@ $(document).ready(function() {
     $('#countdown-container > section')
   );
 
+  // In a time crunch; hacking together solution for keeping container heights the same in Event Details
+  // (function() {
+  //   $eventDetailsInfoBlocks = $('#event-details-container .info-block-body p');
+  //
+  //   $(window).on('resize', function() {
+  //
+  //   });
+  // });
+
 });
