@@ -14,6 +14,7 @@ html {
 body {
   font-family: 'Lato', sans-serif;
   color: #292f33;
+  overflow-x: hidden;
 }
 
 .peach-bg {
@@ -37,12 +38,28 @@ body {
   background-repeat: no-repeat;
 }
 
+.wall-bg {
+  background: url(#{$imgDir}/wall.jpg) no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  @media (max-width: $screen-md) {
+    background-image: url(#{$imgDir}/wall-min.jpg);
+    // Trying to fix an iOS issue... kind of works
+    background-attachment: scroll;
+  }
+}
+
 .silver-bg {
   background-color: #bdc3c7;
 }
 
+.concrete-bg {
+  background-color: $concrete;
+}
+
 .cloudy-bg {
-  background-color: #ecf0f1;
+  background-color: $cloudy;
 }
 
 .peach-text {
@@ -51,6 +68,10 @@ body {
   a:not(.btn) {
     color: darken($light-text-color, 15%);
   }
+}
+
+.cloudy-text {
+  color: $cloudy;
 }
 
 section.ls-container {
@@ -287,4 +308,27 @@ header.title-header {
       background-color: darken($light-text-color, 45%);
     }
   }
+}
+
+.registry-box {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 1rem;
+
+  > .wrapper {
+    padding: 2rem;
+
+    @media (min-width: 500px) {
+      padding: 2rem 4rem;
+    }
+  }
+
+  .registry-thanks {
+    font-weight: bold;
+    font-size: 2rem;
+  }
+}
+
+.registry-logo {
+  width: 14rem;
 }

@@ -9,7 +9,9 @@ const JS_DEPS_DIR = './js/deps/';
 var jsDeps = [
     'jquery',
     'bootstrap',
-    'countdown'
+    'countdown',
+    'jquery.matchHeight',
+    'modernizr'
 ];
 
 module.exports = jsDeps.map(
