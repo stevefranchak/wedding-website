@@ -2,7 +2,29 @@ function Countdown(targetTimeMs, $widgetContainer) {
     this.targetTimeMs = targetTimeMs;
     this.$widgetContainer = $widgetContainer;
 
-    this.timeUnitList = ['weeks', 'days', 'hours', 'minutes', 'seconds'];
+    this.timeUnitList = [
+        {
+            name: 'weeks',
+            display: 'week(s)'
+        },
+        {
+            name: 'days',
+            display: 'day(s)'
+        },
+        {
+            name: 'hours',
+            display: 'hour(s)'
+        },
+        {
+            name: 'minutes',
+            display: 'min'
+        },
+        {
+            name: 'seconds',
+            display: 'sec'
+        }
+    ];
+
     this._countdownUnits = 0;
 
     this._$widget = null;
@@ -30,8 +52,8 @@ Countdown.prototype._setCountdownUnits = function() {
 
     this.timeUnitList
     .map(function(unit) {
-        if (typeof unit === 'string') {
-            return unit.toUpperCase();
+        if (unit.name && typeof unit.name === 'string') {
+            return unit.name.toUpperCase();
         }
         return unit;
     })
@@ -51,7 +73,7 @@ Countdown.prototype._update = function() {
     this._$timeUnitListEles.each(function() {
         var $valueEle = $(this);
             unit = $(this).data('unit');
-        if (unit && ts[unit]) {
+        if (unit && typeof ts[unit] !== 'undefined') {
             $valueEle.text(ts[unit]);
         }
     });
@@ -67,8 +89,8 @@ Countdown.prototype._render = function() {
     var listHtml = ['<ul class="countdown-widget">'];
 
     this.timeUnitList.forEach(function(unit) {
-        listHtml.push('<li><span class="countdown-value" data-unit="' + unit + '"></span> ' +
-            '<span class="countdown-unit">' + unit + '</span></li>');
+        listHtml.push('<li><span class="countdown-value" data-unit="' + unit.name + '"></span> ' +
+            '<span class="countdown-unit">' + unit.display + '</span></li>');
     });
 
     listHtml.push('</ul>');

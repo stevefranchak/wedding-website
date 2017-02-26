@@ -190,6 +190,39 @@ header.title-header {
 .countdown-widget {
   margin-bottom: 0;
   list-style: none;
+  text-align: center;
+  margin-top: 4rem;
+  padding: 0;
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+
+  li {
+    display: inline-block;
+    padding: 1rem;
+    min-width: 7rem;
+
+    @media (min-width: $screen-md) {
+      min-width: 8rem;
+    }
+  }
+
+  span.countdown-value {
+    @extend .header-font;
+    font-size: 3.8rem;
+    letter-spacing: 2px;
+
+    @media (min-width: $screen-md) {
+      font-size: 4.2rem;
+    }
+  }
+
+  span.countdown-unit {
+    display: block;
+    font-size: 1.8rem;
+
+    @media (min-width: $screen-md) {
+      font-size: 2.4rem;
+    }
+  }
 }
 
 .event-details-overview {
@@ -286,6 +319,10 @@ header.title-header {
   @media (min-width: 600px) {
     margin-top: 2.5rem;
   }
+}
+
+.p-bottom-10 {
+  padding-bottom: 1rem;
 }
 
 .p-bottom-20 {
