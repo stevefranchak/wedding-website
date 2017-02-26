@@ -34,8 +34,15 @@ body {
 }
 
 .ring-bg {
-  background-image: url(#{$imgDir}/ring.jpg);
-  background-repeat: no-repeat;
+  background: url(#{$imgDir}/ring.jpg) no-repeat center center;
+  background-color: #b0976f;
+  background-size: cover;
+  background-attachment: fixed;
+
+  @media (max-width: $screen-md) {
+    // Trying to fix an iOS issue... kind of works
+    background-attachment: scroll;
+  }
 }
 
 .wall-bg {
@@ -178,6 +185,11 @@ header.title-header {
     padding: 1rem 27.5%;
     font-size: 2.2rem;
   }
+}
+
+.countdown-widget {
+  margin-bottom: 0;
+  list-style: none;
 }
 
 .event-details-overview {
