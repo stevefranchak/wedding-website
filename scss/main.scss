@@ -115,6 +115,10 @@ header.title-header {
   }
 }
 
+#countdown-container header.title-header > h1 {
+  @include responsive-font(8vw, 32px, 42px);
+}
+
 #intro-container {
   padding: 1rem 1.5rem 5rem;
 
@@ -421,4 +425,8 @@ header.title-header {
   @media (min-width: $screen-md) {
     width: 16rem;
   }
+}
+
+#our-story-container p {
+  margin-bottom: 2rem;
 }
